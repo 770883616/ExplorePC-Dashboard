@@ -1,77 +1,82 @@
 <p align="center">
-  <a href="https://github.com/770883616/ExplorePC-Dashboard.git" target="_blank">
-    <img src="images/Explore.jpg" width="400" alt="ExplorePC Admin Logo">
+  <a href="https://github.com/770883616/ExplorePC-Dashboard" target="_blank">
+    <img src="images/Explore.jpg" width="400" alt="ExplorePC Logo">
   </a>
+  
+  <p align="center">
+    <a href="https://github.com/770883616/ExplorePC-Dashboard/actions">
+      <img src="https://img.shields.io/github/workflow/status/770883616/ExplorePC-Dashboard/CI/CD?label=Build&style=flat-square" alt="Build Status">
+    </a>
+    <a href="https://packagist.org/packages/explorepc/admin">
+      <img src="https://img.shields.io/packagist/v/explorepc/admin?color=blue&style=flat-square" alt="Version">
+    </a>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License">
+    </a>
+  </p>
 </p>
 
-<p align="center">
-  <a href="https://github.com/770883616/ExplorePC-Dashboard.git/actions">
-    <img src="https://github.com/770883616/ExplorePC-Dashboard.git/workflows/CI/CD/badge.svg" alt="Build Status">
-  </a>
-  <a href="https://packagist.org/packages/explorepc/admin">
-    <img src="https://img.shields.io/packagist/v/explorepc/admin" alt="Latest Version">
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-  </a>
-</p>
+## 🌟 نظام إدارة ExplorePC
 
-## 🚀 حول نظام الإدارة
+لوحة تحكم متكاملة لإدارة منصتي:
+- 🛍️ **تطبيق العملاء** (واجهة شراء المنتجات)
+- 🏪 **تطبيق التاجر** (إدارة المخزون والطلبات)
+- ☁️ **الخدمات السحابية** (Firebase, MySQL)
 
-نظام إدارة **ExplorePC** هو لوحة تحكم متكاملة لإدارة:
-- متجر العملاء (تطبيق Flutter للعملاء)
-- تطبيق التاجر (Flutter Admin)
-- قواعد البيانات والخدمات السحابية
+---
 
-## ✨ الميزات الرئيسية
-
-### لوحة التحكم الرئيسية
-![Dashboard](images/Home.pngg)
-
-| الميزة | الوصف |
-|--------|-------|
-| **إحصاءات حية** | عرض المبيعات اليومية والأسبوعية والشهرية |
-| **إدارة الطلبات** | تتبع حالات الطلبات (جديد/قيد التجهيز/مكتمل) |
-| **تحليل البيانات** | رسوم بيانية لتطور المبيعات |
-
-
-|---------|-------|
-| ![Admin](images/user.png) **تطبيق العملاء** |   إدارة العملاء |
-| ![Admin](images/m.png) **تطبيق التاجر** | إدارة  التجار |
-
-## 🛠️ التقنيات المستخدمة
-- **Backend**: Laravel 10 + MySQL
-- **Mobile Apps**: Flutter (iOS & Android)
-- **التخزين السحابي**: Firebase Storage
-- **الرسوم البيانية**: Chart.js
-
-## 📊 لقطات من النظام
+## 🚀 الميزات الرئيسية
 
 <div align="center">
-  <h3>لوحة التحكم الرئيسية</h3>
-  <img src="images/homel.png" width="800" alt="ExplorePC Dashboard">
-  
-  <h3>إدارة الطلبات</h3>
-  <img src="images/order.png" width="800" alt="Orders Management">
+
+| الواجهة | الميزات | 
+|---------|---------|
+| ![Dashboard](images/Home.png) | **لوحة التحكم الرئيسية**<br>- إحصاءات المبيعات الحية<br>- رسوم بيانية تفاعلية<br>- نظرة عامة على الأداء |
+| ![Orders](images/order.png) | **إدارة الطلبات**<br>- تتبع حالات الطلبات<br>- فلترة متقدمة<br>- تحديث الحالة مباشرة |
+
 </div>
 
-## 🔧 متطلبات التنصيب
-1. PHP 8.2+
-2. Composer
-3. Node.js 18+
+---
 
-```bash
+## 📱 تطبيقات النظام
+
+<div align="center">
+
+| إدارة العملاء | إدارة التاجر |
+|--------------|-------------|
+| ![Customer App](images/user.png) | ![Merchant App](images/m.png) |
+| تصفح المنتجات<br>إتمام عمليات الشراء<br>تتبع الطلبات | إدارة المخزون<br>معالجة الطلبات<br>تحليل الإحصائيات |
+
+</div>
+
+---
+
+## 💻 التقنية المستخدمة
+
+```dart
+// تقنيات Flutter الأساسية
+dependencies:
+  flutter_bloc: ^8.1.3
+  firebase_core: ^2.18.0
+  cloud_firestore: ^4.9.0
+  syncfusion_flutter_charts: ^23.1.40
+php
+// تقنيات Backend
+"require": {
+  "laravel/framework": "^10.0",
+  "guzzlehttp/guzzle": "^7.0"
+}
+🛠️ التنصيب
+bash
+# الخطوات الأساسية
 git clone https://github.com/770883616/ExplorePC-Dashboard.git
-cd ExplorePC-Admin
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-📞 الدعم الفني
-للإبلاغ عن مشكلات تقنية:
+cd ExplorePC-Dashboard
+flutter pub get  # لتطبيق Flutter
+composer install # للوحة التحكم Laravel
+📞 الدعم والاتصال
+<div align="center">
+📧 ayman.tawfaq.developer@gmail.com
+📱 +967 770 883 615
 
-📧 البريد الإلكتروني: ayman.tawfaq.developer@gmail.com
-
-📱 الواتساب: +967770883615
-
-<div align="center"> <sub>طور بواسطة <a href="https://github.com/770883616">AYMAN TAWFAQ</a> © 2023</sub> </div> ```
+</div>
+<div align="center"> <br> <sub>تم التطوير بواسطة <a href="https://github.com/770883616" style="color: #4CAF50;">AYMAN TAWFAQ</a> © 2025</sub> <br> <img src="images/homel.png" width="600" style="border-radius: 10px; margin-top: 20px;"> </div> ```
